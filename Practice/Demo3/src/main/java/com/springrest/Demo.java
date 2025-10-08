@@ -41,7 +41,7 @@ public class Demo implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") //mention 2 star
+        registry.addMapping("/**") // mention 2 star
                 .allowedOrigins("*")
                 .allowedMethods("*")
                 .allowedHeaders("*");
