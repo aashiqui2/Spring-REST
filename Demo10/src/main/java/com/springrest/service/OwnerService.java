@@ -1,0 +1,27 @@
+package com.springrest.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import com.springrest.dto.OwnerDTO;
+import com.springrest.dto.OwnerPetInfoDTO;
+import com.springrest.exception.OwnerNotFoundException;
+import com.springrest.exception.ValidationException;
+
+public interface OwnerService {
+	
+	Integer saveOwner(OwnerDTO ownerDTO);
+
+	OwnerDTO findOwner(int ownerId) throws OwnerNotFoundException;
+	
+	List<OwnerDTO> findByAllOwnersByPetDateOfBirthBetween(LocalDate startDate, LocalDate endDate)
+			throws ValidationException;
+
+	List<OwnerDTO> findAllOwners();
+
+	Page<OwnerPetInfoDTO> findOwnerDetails(Pageable pageable);
+
+}

@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "target.base.url",
+      "type": "java.lang.String",
+      "description": "A description for 'target.base.url'"
+    }
+  ]
+}
