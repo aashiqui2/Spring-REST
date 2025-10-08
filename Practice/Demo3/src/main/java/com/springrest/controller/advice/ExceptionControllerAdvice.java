@@ -102,11 +102,6 @@ public class ExceptionControllerAdvice {
                     invalidFormatException.getValue(),
                     invalidFormatException.getPath().get(invalidFormatException.getPath().size() - 1).getFieldName(),
                     Arrays.toString(invalidFormatException.getTargetType().getEnumConstants()));
-            // System.out.println(invalidFormatException.getValue()); // MN
-            // System.out.println(invalidFormatException.getPath()); //
-            // [com.springrest.dto.OwnerDTO["gender"]]
-            // System.out.println(invalidFormatException.getPath().size()); // 1
-
         }
         ErrorDTO errorDTO = ErrorDTO.builder()
                 .message(errorDetails)
